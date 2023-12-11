@@ -1,0 +1,94 @@
+
+<html>
+
+<head>
+  <title>Simple Shopping Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Welcome! Choose your items to purchase</h1>
+  <div class="container">
+    <div class="header">
+      <div class="cart-icon">
+        <img src="images\cart logo.png" alt="Shopping Cart" onclick="showCart()">
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+      <div class="home-page">
+        <img src="images\homo logo.png" alt="home" onclick="redirect()">
+      </div>
+    </div>
+
+    <div class="menu">
+      <div class="item">
+        <img src="images\new pillow.jpeg" alt="Pillow">
+        <span class="item-name">Pillow</span>
+        <span class="item-price">$10</span>
+        <div class="dropdown">
+          <button class="quantity-btn" onclick="changeQuantity('pillow', -1)">-</button>
+          <span class="quantity" id="pillow">0</span>
+          <button class="quantity-btn" onclick="changeQuantity('pillow', 1)">+</button>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart('Pillow', 'pillow')">Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="images\new table.jpeg" alt="Table">
+        <span class="item-name">Table</span>
+        <span class="item-price">$50</span>
+        <div class="dropdown">
+          <button class="quantity-btn" onclick="changeQuantity('table', -1)">-</button>
+          <span class="quantity" id="table">0</span>
+          <button class="quantity-btn" onclick="changeQuantity('table', 1)">+</button>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart('Table', 'table')" >Add to Cart</button>
+      </div>
+
+      <div class="item">
+        <img src="images\new sofa.jpeg">Sofa</span>
+        <span class="item-price">$300</span>
+        <div class="dropdown">
+          <button class="quantity-btn" onclick="changeQuantity('sofa', -1)">-</button>
+          <span class="quantity" id="sofa">0</span>
+          <button class="quantity-btn" onclick="changeQuantity('sofa', 1)">+</button>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart('Sofa', 'sofa')" >Add to Cart</button>
+      </div>
+
+      <div class ="item">
+        <img src="images\new chair.jpeg" alt="chair">
+        <span class="item-name">Chair</span>
+        <span class="item-price">$80</span>
+        <div class="dropdown">
+           <button class="quantity-btn" onclick="changeQuantity('chair',-1)"> - </button>
+           <span class="quantity" id="chair">0</span>
+           <button class="quantity-btn" onclick="changeQuantity('chair', 1)"> + </button>
+        </div>
+        <button class="add-to-cart-btn" onclick="addToCart('Chair','chair')"> Add to Cart</button>
+    </div>
+
+    <div class="cart" id="cartItems" style="display:block">
+      <div class="cart-item">
+        <img src="images\new sofa.jpeg" alt="Sofa"> 
+        <span class="cart-item-name">Sofa</span>
+        <span class="cart-item-quantity">Quantity: 1</span>
+
+    </div>
+    </div>
+
+
+    <div class="done" id="done">
+        <a href="https://www.google.com/">Done</a>
+    </div>
+
+  </div>
+
+  <div class = "total">
+    <h2>Total: $0.00</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
